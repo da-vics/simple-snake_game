@@ -8,38 +8,29 @@ void snake::get_key()
 
 		switch (_getch()) {
 
-		case 'w':
-		case 'W':
+		case 'w': case 'W':
 			--snakey;
 			state = dir::UP;
 			break;
 
-		case 's':
-		case 'S':
+		case 's': case 'S':
 			state = dir::DOWN;
 			++snakey;
-
 			break;
 
-		case 'a':
-		case 'A':
+		case 'a': case 'A':
 			state = dir::LEFT;
 			--snakex;
-
 			break;
 
-		case 'd':
-		case 'D':
+		case 'd': case 'D':
 			state = dir::RIGHT;
 			++snakex;
 			break;
 
-		case 'p':
-		case 'P':
+		case 'p': case 'P':
 			system("pause");
 			break;
-
-
 		} ///
 	}  ///
 
@@ -187,7 +178,6 @@ void snake::collison(bool& ov) {
 			cout << "game over!" << endl;
 			system("pause");
 			ov = true;
-
 		}
 	}
 }
@@ -207,7 +197,6 @@ void snake::set_fruits()
 		fruit_y = rand() % height - 5;
 		fruit_x = abs(fruit_x);
 		fruit_y = abs(fruit_y);
-
 	}
 }
 
