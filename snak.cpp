@@ -33,7 +33,6 @@ void snake::get_key()
 			break;
 		} ///
 	}  ///
-
 	snake::tail();
 }
 
@@ -48,17 +47,13 @@ void snake::draw()
 
 	snake::eat();       ///
 
-	if (snakex >= width - 1)
-		snakex = 1;
+	if (snakex >= width - 1) snakex = 1;
 
-	if (snakex <= 0)
-		snakex = width - 1;
+	if (snakex <= 0) snakex = width - 1;
 
-	if (snakey >= height - 1)
-		snakey = 1;
+	if (snakey >= height - 1) snakey = 1;
 
-	if (snakey <= 0)
-		snakey = height - 1;
+	if (snakey <= 0) snakey = height - 1;
 
 	window[snakey][snakex] = 'O';
 	window[fruit_y][fruit_x] = '&';
