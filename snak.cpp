@@ -121,6 +121,10 @@ void snake::tail()
 	int* prx = new int[num_tails];
 	int* pry = new int[num_tails];
 
+	if (num_tails > 38)
+	{
+		num_tails = 1;
+	}
 	if (num_tails == 0) {
 		prx[0] = NULL;        ///
 		pry[0] = NULL;
@@ -132,8 +136,8 @@ void snake::tail()
 
 	} /// if num_tails....
 
-	else if (num_tails > 1) {
-
+	else if (num_tails > 1) 
+	{
 		prx[0] = snake_tailx[0];
 		pry[0] = snake_taily[0];
 		snake_tailx[0] = prevx;
@@ -148,7 +152,6 @@ void snake::tail()
 			window[snake_taily[i]][snake_tailx[i]] = 'o';
 
 		}
-
 	}  ///
 
 	prx = nullptr;
@@ -162,17 +165,14 @@ void snake::con()
 	/// for continous movement of the snake
 	prevx = snakex;
 	prevy = snakey;
-	if (state == dir::UP)
-		--snakey;
 
-	else if (state == dir::DOWN)
-		++snakey;
+	if (state == dir::UP) --snakey;
 
-	else if (state == dir::LEFT)
-		--snakex;
+	else if (state == dir::DOWN) ++snakey;
 
-	else if (state == dir::RIGHT)
-		++snakex;
+	else if (state == dir::LEFT) --snakex;
+
+	else if (state == dir::RIGHT) ++snakex;
 
 	snake::tail();
 }

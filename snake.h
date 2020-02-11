@@ -24,7 +24,6 @@ enum class dir :int
 
 class snake
 {
-
 private:
 	int16_t snakex,
 		snakey,
@@ -42,7 +41,6 @@ private:
 		snake_taily[40];
 
 public:
-
 	snake()              ///
 	{
 		prevx = 0;
@@ -52,7 +50,6 @@ public:
 		snakey = (height / 2);
 		num_tails = 0;
 		fruit_x = 0;
-		n = 0;
 		fruit_y = 0;
 		snake_tailx[0] = NULL;
 		snake_taily[0] = NULL;
