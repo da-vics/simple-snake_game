@@ -3,7 +3,7 @@
 int main()
 {
 	system("mode 50");
-	system("color 7c");
+	system("color 2");
 
 	bool over = false;
 

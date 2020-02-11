@@ -122,7 +122,7 @@ void snake::tail()
 
 	} /// if num_tails....
 
-	else if (num_tails > 1) 
+	else if (num_tails > 1)
 	{
 		prx[0] = snake_tailx[0];
 		pry[0] = snake_taily[0];
